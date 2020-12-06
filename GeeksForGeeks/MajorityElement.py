@@ -5,12 +5,11 @@
 def majorityElement(A,N):
     A.sort()
     prevElem = 0
-    majCount = N/2
     count = 0
     for i in range(len(A)):
         prevElem = A[i - 1]
         if A[i] == prevElem:
-            ++count
+            count = count + 1
         else:
             count
         if count > N/2:
