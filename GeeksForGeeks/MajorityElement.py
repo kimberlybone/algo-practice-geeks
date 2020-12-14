@@ -5,14 +5,17 @@
 
 # Have 2 loops
 def majorityElement(A,N):
-    A.sort()
-    prevElem = 0
-    count = 0
-    for i in range(len(A)):
-        prevElem = A[i - 1]
-        if A[i] == prevElem:
-            count = count + 1
-        else:
-            count
-        if count > N/2:
-            return A[i]
+    majCount = 0
+    index = -1
+    for i in range(N):
+        count = 0
+        for j in range(N):
+            if(A[i] == A[j]):
+                count += 1
+        if(count > majCount):
+            majCount = count
+            index = i
+    if(count > N//2):
+        print(A[index])
+    else:
+        print("No majority element")
