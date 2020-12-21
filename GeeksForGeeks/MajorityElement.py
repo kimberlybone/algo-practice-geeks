@@ -4,6 +4,7 @@
 # Return "-1" if no majority exists
 
 # Have 2 loops
+# Iterates over the array & then iterates over each # to count its occurrences
 def majorityElement(A,N):
     majCount = 0
     index = -1
@@ -12,10 +13,10 @@ def majorityElement(A,N):
         for j in range(N):
             if(A[i] == A[j]):
                 count += 1
-        if(count > majCount):
+        if count > majCount:
             majCount = count
             index = i
-    if(count > N//2):
+    if count > N//2:
         print(A[index])
     else:
         print("No majority element")
