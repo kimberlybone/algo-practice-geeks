@@ -5,19 +5,19 @@
 
 # Have 2 loops
 # Iterates over the array & then iterates over each # to count its occurrences
+# program took longer than expected
 def majorityElement(A,N):
-    A.sort()
-    majCount = 0
     index = -1
+    majCount = 0
     for i in range(N):
         count = 0
         for j in range(N):
-            if(A[i] == A[j]):
+            if A[i] == A[j]:
                 count += 1
         if count > majCount:
             majCount = count
             index = i
-    if count > N//2:
+    if majCount > N//2:
         return A[index]
     else:
         return -1
