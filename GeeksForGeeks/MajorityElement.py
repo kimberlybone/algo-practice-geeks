@@ -5,7 +5,6 @@
 
 # Have 2 loops
 # Iterates over the array & then iterates over each # to count its occurrences
-# program took longer than expected
 def majorityElement(A,N):
     index = -1
     majCount = 0
@@ -21,3 +20,5 @@ def majorityElement(A,N):
         return A[index]
     else:
         return -1
+
+# INCOMPLETE: program took longer than expected
